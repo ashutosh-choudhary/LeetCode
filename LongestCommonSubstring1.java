@@ -1,5 +1,5 @@
 public class LongestCommonSubstring1 {
-    public String longestPalindrome(String s) {
+    public String lcsubstring_dp(String s, String rev) {
         //Dynamic Programming Solution
         // make a dp table
          int [][] dp = new int[s.length() + 1][s.length() + 1];
@@ -8,8 +8,8 @@ public class LongestCommonSubstring1 {
             dp[i][0] = 0;
             dp[0][i] = 0;
         }
-        String rev = new StringBuilder(s).reverse().toString();
-        System.out.println(rev);
+        //String rev = new StringBuilder(s).reverse().toString();
+        //System.out.println(rev);
         StringBuilder result = new StringBuilder("");
         for(int i = 1; i < rev.length() + 1; i++){
             for(int j = 1; j < s.length() + 1; j++){
